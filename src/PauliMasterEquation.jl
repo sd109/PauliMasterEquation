@@ -6,9 +6,9 @@ using a Pauli Master Equation of the form:
 
 with
 
-    W(n, m) = ∑_(a,b) γ_(a,b)(ε_m - ε_n) <m|A_a|n> <n|A_b|m>
+    W(n, m) = ∑_μ γ_μ(ω) <m|A_μ|n> <n|A_μ|m>
 
-and ω as the eigen-energy difference ω = εa - εb.
+and ω as the eigen-energy difference ω = εm - εn.
 """
 
 
