@@ -36,9 +36,10 @@ function W_matrix(H::AbstractOperator, a_ops) #a_ops[i][1] is interaction op and
 
     #Pre-allocate output matrix
     W_matrix = zeros(N, N)
-    for i in 1:K
+    for i in 1:K #Loop through a_ops    
         A_eb = inv_transf_mat * data(a_ops[i][1]) * transf_mat
-		W_matrix .+= a_ops[i][2].(diffs) .* A_eb .* transpose(A_eb)
+		# W_matrix .+= a_ops[i][2].(diffs) .* A_eb .* transpose(A_eb)
+		W_matrix .+= a_ops[i][2].(diffs) .* A_eb .* transpose(conj(A_eb))
 	end
 
     return W_matrix, transf_mat
